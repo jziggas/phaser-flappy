@@ -29,14 +29,14 @@ var play_state = {
 
         this.game.physics.overlap(this.bird, this.pipes, this.hit_pipe, null, this);
 
-        if (game.input.activePointer.isDown && !this.touched) {
+        if (this.game.input.activePointer.isDown && !this.touched) {
             this.touched = true;
             this.jump();
         }
 
-if (game.input.activePointer.isUp) {
-this.touched = false;
-}
+        if (this.game.input.activePointer.isUp) {
+            this.touched = false;
+        }
     },
 
     jump: function() {
