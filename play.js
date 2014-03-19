@@ -21,7 +21,7 @@ var play_state = {
     },
 
     update: function() {
-        var touched = false;
+        var this.touched = false;
         if (this.bird.inWorld == false)
             this.restart_game(); 
 
