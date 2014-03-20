@@ -18,7 +18,9 @@ var play_state = {
         this.label_score = this.game.add.text(20, 20, "0", style); 
 
         this.jump_sound = this.game.add.audio('jump');
-        this.hit_sound = this.game.add.audio('hit'); 
+        this.hit_sound = this.game.add.audio('hit');
+
+        var this.touched = false;
     },
 
     update: function() {
