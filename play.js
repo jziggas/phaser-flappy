@@ -3,6 +3,7 @@ var play_state = {
     create: function() { 
         var space_key = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         space_key.onDown.add(this.jump, this); 
+        background = this.game.add.tileSprite(0, 0, 640, 384, 'background');
 
         this.pipes = game.add.group();
         this.pipes.createMultiple(20, 'pipe');  
@@ -44,7 +45,7 @@ var play_state = {
         if (this.bird.alive == false)
             return; 
 
-        this.bird.body.velocity.y = -350;
+        this.bird.body.velocity.y = -300;
         this.game.add.tween(this.bird).to({angle: -20}, 100).start();
         this.jump_sound.play();
     },
@@ -79,7 +80,7 @@ var play_state = {
 
         for (var i = 0; i < 8; i++)
             if (i != hole && i != hole +1) 
-                this.add_one_pipe(400, i*60+10);   
+                this.add_one_pipe(600, i*60+10);   
 
         score += 1; 
         this.label_score.content = score;  
