@@ -20,7 +20,7 @@ var play_state = {
         this.jump_sound = this.game.add.audio('jump');
         this.hit_sound = this.game.add.audio('hit');
 
-        this.touched = false;
+        // this.touched = false;
     },
 
     update: function() {
@@ -32,12 +32,12 @@ var play_state = {
 
         this.game.physics.overlap(this.bird, this.pipes, this.hit_pipe, null, this);
 
-        if (this.game.input.activePointer.isDown && !this.touched) {
+        if (game.input.activePointer.isDown && !this.touched) {
             this.touched = true;
             this.jump();
         }
 
-        if (this.game.input.activePointer.isUp) {
+        if (game.input.activePointer.isUp) {
             this.touched = false;
         }
     },
