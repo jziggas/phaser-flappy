@@ -1,4 +1,5 @@
 var play_state = {
+    var this.touched;
 
     create: function() { 
         var space_key = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
