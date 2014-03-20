@@ -32,7 +32,7 @@ var play_state = {
 
         this.game.physics.overlap(this.bird, this.pipes, this.hit_pipe, null, this);
 
-        if (game.input.activePointer.onTap)
+        if (this.game.input.activePointer.onTap)
             this.jump();
     },
 
