@@ -34,11 +34,11 @@ var play_state = {
         if (this.game.input.activePointer.isDown && !this.touched) {
             this.touched = true;
             this.jump();
-        } else this.touched = false;
+        }
 
-        /* if (this.game.input.activePointer.isUp) {
+        if (this.game.input.activePointer.isUp) {
             this.touched = false;
-        }*/
+        
     },
 
     jump: function() {
