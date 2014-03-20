@@ -20,7 +20,7 @@ var play_state = {
         this.jump_sound = this.game.add.audio('jump');
         this.hit_sound = this.game.add.audio('hit');
 
-        var this.touched = false;
+        this.touched = false;
     },
 
     update: function() {
