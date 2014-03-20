@@ -76,11 +76,11 @@ var play_state = {
     },
 
     add_row_of_pipes: function() {
-        var hole = Math.floor(Math.random()*5)+1;
+        var hole = Math.floor(Math.random()*4)+1;
 
-        for (var i = 0; i < 8; i++)
+        for (var i = 0; i < 6; i++)
             if (i != hole && i != hole +1) 
-                this.add_one_pipe(600, i*60+10);   
+                this.add_one_pipe(600, i*65);   
 
         score += 1; 
         this.label_score.content = score;  
